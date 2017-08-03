@@ -1,41 +1,24 @@
 {
     "name": "yiichina/yii2-md-editor",
-    "description": "Yii 2 Advanced Application Template",
-    "keywords": ["yii2", "framework", "advanced", "application template"],
-    "homepage": "http://www.yiiframework.com/",
-    "type": "project",
+    "description": "Yii2 中使用 Markdown 在线文本编辑器",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","editor", "markdown"],
     "license": "BSD-3-Clause",
-    "support": {
-        "issues": "https://github.com/yiisoft/yii2/issues?state=open",
-        "forum": "http://www.yiiframework.com/forum/",
-        "wiki": "http://www.yiiframework.com/wiki/",
-        "irc": "irc://irc.freenode.net/yii",
-        "source": "https://github.com/yiisoft/yii2"
-    },
-    "minimum-stability": "stable",
-    "require": {
-        "php": ">=5.4.0",
-        "yiisoft/yii2": "*",
-        "yiisoft/yii2-bootstrap": "*",
-        "yiisoft/yii2-swiftmailer": "*"
-    },
-    "require-dev": {
-        "yiisoft/yii2-codeception": "*",
-        "yiisoft/yii2-debug": "*",
-        "yiisoft/yii2-gii": "*",
-        "yiisoft/yii2-faker": "*"
-    },
-    "config": {
-        "process-timeout": 1800
-    },
-    "extra": {
-        "asset-installer-paths": {
-            "npm-asset-library": "vendor/npm",
-            "bower-asset-library": "vendor/bower"
+    "authors": [
+        {
+            "name": "cuileon",
+            "email": "admin@yiichina.com"
         }
+    ],
+    "require": {
+        "yiisoft/yii2": ">=2.0.6",
+        "bower-asset/cmd-editor": "*",
+        "bower-asset/codemirror": "*",
+        "bower-asset/marked": "*"
     },
-    "repositories": [
-        {"type": "composer", "url": "http://pkg.phpcomposer.com/repo/packagist/"},
-        {"packagist": false}
-    ]
+    "autoload": {
+        "psr-4": {
+            "yiichina\\md-editor\\": ""
+        }
+    }
 }

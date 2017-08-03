@@ -17,7 +17,7 @@ use yii\web\AssetBundle;
  */
 class MdEditorAsset extends AssetBundle
 {
-    public $sourcePath = '@bower/cmd-editor';
+    public $sourcePath = '@bower/cmd-editor/src';
 
     public $css = [
         'css/md-editor.css',

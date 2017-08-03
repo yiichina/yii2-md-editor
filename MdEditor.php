@@ -14,7 +14,7 @@ class MdEditor extends \yii\widgets\InputWidget
         parent::init();
         $view = $this->getView();
         MdEditorAsset::register($view);
-		$view->registerJs("(\"#{$this->options['id']}\").mdEditor()");
+		$view->registerJs("$(\"#{$this->options['id']}\").mdEditor()");
     }
 
     public function run()

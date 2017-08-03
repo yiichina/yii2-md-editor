@@ -24,10 +24,11 @@ class CodeMirrorAsset extends AssetBundle
     ];
 
     public $js = [
-        'js/codemirror.js',
+        'lib/codemirror.js',
     ];
 
     public $depends = array(
-        'yii\bootstrap\BootstrapAsset'
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
     );
 }

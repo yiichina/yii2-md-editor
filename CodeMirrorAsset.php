@@ -25,6 +25,7 @@ class CodeMirrorAsset extends AssetBundle
 
     public $js = [
         'lib/codemirror.js',
+        'mode/markdown/markdown.js',
     ];
 
     public $depends = array(

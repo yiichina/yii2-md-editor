@@ -21,16 +21,16 @@ class MdEditor extends \yii\widgets\InputWidget
         $view = $this->getView();
         MdEditorAsset::register($view);
         $optionsArray = [];
-		if($this->debug)) {
+		if($this->debug) {
             $optionsArray['debug'] = true;
         }
-        if(empty($this->codeMirror)) {
+        if(!empty($this->codeMirror)) {
             $optionsArray['codeMirror'] = $this->codeMirror;
         }
-        if(empty($this->buttons)) {
+        if(!empty($this->buttons)) {
             $optionsArray['buttons'] = $this->buttons;
         }
-        if(empty($this->codeMirror)) {
+        if(!empty($this->codeMirror)) {
             $optionsArray['disabledButtons'] = $this->disabledButtons;
         }
         $options = Json::encode($optionsArray);

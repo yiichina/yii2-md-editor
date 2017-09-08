@@ -20,4 +20,7 @@ composer require --prefer-dist yiichina/yii2-md-editor "*"
 
 到你的 `composer.json` 文件的包含部分。
 
+文档和 Demo
+----------
 
+http://extension.yiichina.com/yii2-md-editor

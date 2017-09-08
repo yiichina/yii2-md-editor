@@ -23,4 +23,4 @@ composer require --prefer-dist yiichina/yii2-md-editor "*"
 文档和 Demo
 ----------
 
-http://extension.yiichina.com/yii2-md-editor
+http://extension.yiichina.com/md-editor

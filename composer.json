@@ -11,10 +11,11 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": ">=2.0.6",
+        "yiisoft/yii2-bootstrap": "~2.0.0",
         "bower-asset/cmd-editor": "*",
         "bower-asset/codemirror": "*",
-        "bower-asset/marked": "*"
+        "bower-asset/marked": "*",
+        "bower-asset/blueimp-file-upload": "*"
     },
     "autoload": {
         "psr-4": {

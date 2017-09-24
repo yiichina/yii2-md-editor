@@ -59,7 +59,7 @@ class AttachmentController extends Controller
                 $path = Yii::getAlias('@webroot/uploads/files/');
 
                 if(!is_dir($path . $month . '/')) {
-                    mkdir($path . $month . '/', 0755);
+                    mkdir($path . $month . '/', 0755, true);
                 }
 
                 $basename = date('dHis') . rand(100, 999);
@@ -105,7 +105,7 @@ class AttachmentController extends Controller
                 $path = Yii::getAlias('@webroot/uploads/images/');
 
                 if(!is_dir($path . $month . '/')) {
-                    mkdir($path . $month . '/', 0755);
+                    mkdir($path . $month . '/', 0755, true);
                 }
 
                 $basename = date('dHis') . rand(100, 999);

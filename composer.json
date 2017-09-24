@@ -15,7 +15,8 @@
         "bower-asset/cmd-editor": "*",
         "bower-asset/codemirror": "*",
         "bower-asset/marked": "*",
-        "bower-asset/blueimp-file-upload": "*"
+        "bower-asset/blueimp-file-upload": "*",
+        "bower-asset/blueimp-gallery": "*"
     },
     "autoload": {
         "psr-4": {

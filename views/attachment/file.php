@@ -1,11 +1,11 @@
 <?php
-use yii\helpers\Html;
 
+use yii\helpers\Html;
 ?>
 
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <h2 class="modal-title">插入链接</h2>
+    <h4 class="modal-title">插入链接</h4>
 </div>
 
 <div class="modal-body">
@@ -15,7 +15,7 @@ use yii\helpers\Html;
         <li><a href="#history" data-toggle="tab">历史文件</a></li>
     </ul>
     <div class="tab-content">
-       <div class="tab-pane fade in active" id="url">
+        <div class="tab-pane fade in active" id="url">
             <div class="form-group">
                 <label for="exampleInputEmail1">链接URL</label>
                 <input type="text" class="form-control" id="link-url" placeholder="链接URL">
@@ -115,22 +115,22 @@ use yii\helpers\Html;
                         {% } else { %}
                             <button class="btn btn-sm btn-warning cancel">
                                 <i class="glyphicon glyphicon-ban-circle"></i>
-                                <span>Cancel</span>
+                                <span>取消</span>
                             </button>
                         {% } %}
                     </td>
                 </tr>
             {% } %}
             </script>
-       </div>
-       <div class="tab-pane fade" id="history">
+        </div>
+        <div class="tab-pane fade" id="history">
             <?php foreach($history as $data): ?>
             <div><?= $data->name ?></div>
             <?php endforeach; ?> 
-       </div>
+        </div>
     </div>
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-success" data-dismiss="modal">插入</button>
     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+    <button type="button" class="btn btn-success" data-dismiss="modal">插入</button>
 </div>

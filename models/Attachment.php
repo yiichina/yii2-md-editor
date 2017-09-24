@@ -62,12 +62,10 @@ class Attachment extends \yii\db\ActiveRecord
     {
         if (parent::beforeSave($insert)) {
             if($insert) {
-                if(!Yii::$app->user->isGuest && self::find()->where(['user_id' => Yii::$app->user->id])->andWhere(['>', 'created_at', strtotime(date('Y-m-d'))])->count() < 10) {
+                if(!Yii::$app->user->isGuest) {
                     $this->user_id = Yii::$app->user->id;
-                    $this->created_at = time();
-                } else {
-                    return false;
                 }
+                $this->created_at = time();
             }
             return true;
         } else {

@@ -5,7 +5,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace app\widgets;
+namespace yiichina\mdeditor;
 
 use Yii;
 use yii\imagine\BaseImage;

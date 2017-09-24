@@ -5,7 +5,7 @@ use yii\helpers\Html;
 
 <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-    <h2 class="modal-title">插入图片</h2>
+    <h4 class="modal-title">插入图片</h4>
 </div>
 
 <div class="modal-body">
@@ -15,7 +15,7 @@ use yii\helpers\Html;
         <li><a href="#history" data-toggle="tab">历史图片</a></li>
     </ul>
     <div class="tab-content">
-       <div class="tab-pane fade in active" id="url">
+        <div class="tab-pane fade in active" id="url">
             <div class="form-group">
                 <label for="exampleInputEmail1">图片URL</label>
                 <input type="text" class="form-control" id="image-url" placeholder="图片URL">
@@ -27,7 +27,7 @@ use yii\helpers\Html;
         </div>
         <div class="tab-pane fade" id="upload">
             <?= Html::beginForm('', 'post', $options = ['id' => 'fileupload', 'enctype' => 'multipart/form-data']) ?>
-            <div class="fileupload-buttonbar"> 
+            <div class="fileupload-buttonbar">
                 <span class="btn btn-sm btn-success fileinput-button">
                     <i class="glyphicon glyphicon-plus"></i>
                     <span>添加图片...</span>
@@ -115,22 +115,22 @@ use yii\helpers\Html;
                         {% } else { %}
                             <button class="btn btn-sm btn-warning cancel">
                                 <i class="glyphicon glyphicon-ban-circle"></i>
-                                <span>Cancel</span>
+                                <span>取消</span>
                             </button>
                         {% } %}
                     </td>
                 </tr>
             {% } %}
             </script>
-       </div>
-       <div class="tab-pane fade" id="history">
+        </div>
+        <div class="tab-pane fade" id="history">
             <?php foreach($history as $data): ?>
             <div><?= $data->name ?></div>
-            <?php endforeach; ?> 
-       </div>
+            <?php endforeach; ?>
+        </div>
     </div>
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-success" data-dismiss="modal">插入</button>
     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+    <button type="button" class="btn btn-success" data-dismiss="modal">插入</button>
 </div>

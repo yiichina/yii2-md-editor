@@ -97,7 +97,7 @@ class AttachmentController extends Controller
         if (Yii::$app->request->isPost) {
             $model->file = UploadedFile::getInstance($model, 'file');
 
-            if ($model->file && $model->validate()) {               
+            if ($model->file && $model->validate()) {
                 $month = date('Ym');
                 $model->name = $model->file->name;
                 $model->size = $model->file->size;

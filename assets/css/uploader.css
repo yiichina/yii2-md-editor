@@ -1,0 +1,12 @@
+#uploader .template-download .preview img {
+    max-width: 80px;
+    max-height: 80px;
+}
+
+#uploader .tab-content {
+    margin-top: 10px;
+}
+
+#uploader .nav > li > a {
+    padding: 8px 10px;
+}

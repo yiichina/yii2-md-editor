@@ -1,9 +1,9 @@
 <?php
 
 namespace yiichina\mdeditor;
-
 use yii\Helpers\Html;
 use yii\helpers\Json;
+use yii\web\JsExpression;
 
 /**
  * This is just an example.
@@ -14,6 +14,7 @@ class MdEditor extends \yii\widgets\InputWidget
     public $codeMirror;
     public $buttons;
     public $disabledButtons;
+    public $allowUpload = true;
 
     public function init()
     {
@@ -26,6 +27,12 @@ class MdEditor extends \yii\widgets\InputWidget
         }
         if(!empty($this->codeMirror)) {
             $optionsArray['codeMirror'] = $this->codeMirror;
+        }
+        if($this->allowUpload) {
+		    FileUploadAsset::register($view);
+		    echo Uploader::widget();
+		    $optionsArray['buttons']['link']['action'] = new JsExpression("function() { $.setUploader(this, 'file'); }");
+            $optionsArray['buttons']['image']['action'] = new JsExpression("function(e) { $.setUploader(this, 'image') }");
         }
         if(!empty($this->buttons)) {
             $optionsArray['buttons'] = $this->buttons;

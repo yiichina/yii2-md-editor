@@ -30,7 +30,6 @@ class MdEditor extends \yii\widgets\InputWidget
         }
         if($this->allowUpload) {
 		    FileUploadAsset::register($view);
-		    echo Uploader::widget();
 		    $optionsArray['buttons']['link']['action'] = new JsExpression("function() { $.setUploader(this, 'file'); }");
             $optionsArray['buttons']['image']['action'] = new JsExpression("function(e) { $.setUploader(this, 'image') }");
         }

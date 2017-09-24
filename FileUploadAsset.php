@@ -24,7 +24,7 @@ class FileUploadAsset extends AssetBundle
     public $depends = [
 		'yiichina\mdeditor\TmplAsset',
 		'yiichina\mdeditor\LoadImageAsset',
+		'yiichina\mdeditor\GalleryAsset',
         'yiichina\mdeditor\UploaderAsset',
-		//'yiichina\mdeditor\GalleryAsset',
     ];
 }

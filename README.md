@@ -20,6 +20,21 @@ composer require --prefer-dist yiichina/yii2-md-editor "*"
 
 到你的 `composer.json` 文件的包含部分。
 
+安装数据库：
+```
+yii migrate/up --migrationPath=@vendor/yiichina/yii2-md-editor/migrations
+```
+在web目录创建uploads目录并给写权限：
+```
+mkdir -p -m 777 web/uploads
+```
+在config/main.php中加入以下代码：
+```
+'controllerMap' => [
+    'attachment' => 'yiichina\mdeditor\controllers\AttachmentController',
+],
+```
+
 文档和 Demo
 ----------
 

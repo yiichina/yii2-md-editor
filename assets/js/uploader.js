@@ -7,7 +7,7 @@
                 $('body').append(html);
             }
 
-            $('.modal-content').load('/attachment/' + type, function(){
+            $('#uploader .modal-content').load('/attachment/' + type, function(){
                 $('#fileupload').fileupload();
                 if(type == 'image') {
                     var selection = obj.cm.getSelection();

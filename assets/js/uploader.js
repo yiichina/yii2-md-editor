@@ -2,12 +2,11 @@
     'use strict';
     jQuery.extend({
         setUploader: function(obj, type) {
-            var html = '<div class="fade modal" id="uploader" tabindex="-1" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button></div><div class="modal-body"></div></div></div></div>';
-            if($("#uploader").length == 0) {
-                $('body').append(html);
+            if($(".modal").length == 0) {
+                $('body').append('<div class="fade modal" tabindex="-1" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button></div><div class="modal-body"></div></div></div></div>');
             }
 
-            $('#uploader .modal-content').load('/attachment/' + type, function(){
+            $('.modal-content').load('/attachment/' + type, function(){
                 $('#fileupload').fileupload();
                 if(type == 'image') {
                     var selection = obj.cm.getSelection();
@@ -72,21 +71,7 @@
                 }
             });
 
-            $("#uploader").modal();
+            $(".modal").modal();
         }
     });
-
-    //gallery
-    if(typeof blueimp == 'object') {
-        $('body').append('<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls"><div class="slides"></div><h3 class="title"></h3><a class="prev">‹</a><a class="next">›</a><a class="close">×</a><a class="play-pause"></a><ol class="indicator"></ol></div>');
-        $('p img').each(function(){
-            var img_src = $(this).attr('src');
-            var img_alt = $(this).attr('alt');
-            var reg = /^\/uploads\/images\/\w/;
-            if(reg.test(img_src)) {
-                img_src = img_src.replace('_thumb.', '.');
-            }
-            $(this).wrap('<a href="' + img_src + '" title="' + img_alt + '" data-gallery></a>');
-        });
-    }
 })(window.jQuery);

@@ -17,12 +17,12 @@ use yii\helpers\Html;
     <div class="tab-content">
         <div class="tab-pane fade in active" id="url">
             <div class="form-group">
-                <label for="exampleInputEmail1">图片URL</label>
-                <input type="text" class="form-control" id="image-url" placeholder="图片URL">
+                <label for="attachment-url">图片URL</label>
+                <input type="text" class="form-control" id="attachment-url" placeholder="图片URL">
             </div>
             <div class="form-group">
-                <label for="exampleInputPassword1">图片描述</label>
-                <input type="text" class="form-control" id="image-title" placeholder="图片描述">
+                <label for="attachment-title">图片描述</label>
+                <input type="text" class="form-control" id="attachment-title" placeholder="图片描述">
             </div>
         </div>
         <div class="tab-pane fade" id="upload">

@@ -8,7 +8,7 @@ use yii\helpers\Html;
     <h4 class="modal-title">插入图片</h4>
 </div>
 
-<div class="modal-body">
+<div class="modal-body" id="uploader">
     <ul class="nav nav-tabs">
         <li class="active"><a href="#url" data-toggle="tab">图片地址</a></li>
         <li><a href="#upload" data-toggle="tab">上传图片</a></li>

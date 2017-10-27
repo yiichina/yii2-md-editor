@@ -31,7 +31,7 @@ class MdEditor extends \yii\widgets\InputWidget
         if($this->allowUpload) {
             FileUploadAsset::register($view);
             $optionsArray['buttons']['link']['action'] = new JsExpression("function() { $.setUploader(this, 'file'); }");
-            $optionsArray['buttons']['image']['action'] = new JsExpression("function() { $.setUploader(this, 'image'); }");
+            $optionsArray['buttons']['image']['action'] = new JsExpression("function(e) { $.setUploader(this, 'image') }");
         }
         if(!empty($this->buttons)) {
             $optionsArray['buttons'] = $this->buttons;
@@ -39,9 +39,8 @@ class MdEditor extends \yii\widgets\InputWidget
         if(!empty($this->codeMirror)) {
             $optionsArray['disabledButtons'] = $this->disabledButtons;
         }
-        $optionsArray['buttons']['info']['action'] = new JsExpression("function() { window.open('http://extension.yiichina.com/md-editor'); }");
         $options = Json::encode($optionsArray);
-        $view->registerJs("$('#{$this->options['id']}').mdEditor($options)");
+        $view->registerJs("$(\"#{$this->options['id']}\").mdEditor($options)");
     }
 
     public function run()

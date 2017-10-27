@@ -26,6 +26,15 @@ class CodeMirrorAsset extends AssetBundle
     public $js = [
         'lib/codemirror.js',
         'mode/markdown/markdown.js',
+        'mode/gfm/gfm.js',
+        'mode/htmlmixed/htmlmixed.js',
+        'mode/xml/xml.js',
+        'mode/javascript/javascript.js',
+        'mode/css/css.js',
+        'mode/clike/clike.js',
+        'mode/php/php.js',
+        'addon/mode/overlay.js',
+        'addon/edit/matchbrackets.js',
     ];
 
     public $depends = array(

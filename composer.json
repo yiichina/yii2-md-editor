@@ -13,6 +13,7 @@
     "require": {
         "yiisoft/yii2-bootstrap": "~2.0.0",
         "yiisoft/yii2-imagine": "*",
+        "yiichina/yii2-icons": "*",
         "bower-asset/cmd-editor": "*",
         "bower-asset/codemirror": "*",
         "bower-asset/marked": "*",

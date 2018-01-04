@@ -28,7 +28,7 @@ class MdEditorAsset extends AssetBundle
     ];
 
     public $depends = array(
-        'yiichina\icons\IconsAsset',
+        'yiichina\icons\IconAsset',
         'yiichina\mdeditor\CodeMirrorAsset',
         'yiichina\mdeditor\MarkedAsset',
     );

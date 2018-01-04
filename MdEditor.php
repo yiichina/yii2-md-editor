@@ -1,6 +1,8 @@
 <?php
 
 namespace yiichina\mdeditor;
+
+use yii\Helpers\Url;
 use yii\Helpers\Html;
 use yii\helpers\Json;
 use yii\web\JsExpression;
@@ -14,7 +16,7 @@ class MdEditor extends \yii\widgets\InputWidget
     public $codeMirror;
     public $buttons;
     public $disabledButtons;
-    public $allowUpload = true;
+    public $allowUpload = false;
 
     public function init()
     {
@@ -30,8 +32,8 @@ class MdEditor extends \yii\widgets\InputWidget
         }
         if($this->allowUpload) {
             FileUploadAsset::register($view);
-            $optionsArray['buttons']['link']['action'] = new JsExpression("function() { $.setUploader(this, 'file'); }");
-            $optionsArray['buttons']['image']['action'] = new JsExpression("function(e) { $.setUploader(this, 'image') }");
+            $optionsArray['buttons']['link']['action'] = new JsExpression("function() { $.setUploader(this, 'file', '" . Url::to(['/attachment/file']) . "'); }");
+            $optionsArray['buttons']['image']['action'] = new JsExpression("function() { $.setUploader(this, 'image', '" . Url::to(['/attachment/image']) . "'); }");
         }
         if(!empty($this->buttons)) {
             $optionsArray['buttons'] = $this->buttons;

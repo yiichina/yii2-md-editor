@@ -1,11 +1,11 @@
 (function ($) {
     'use strict';
     jQuery.extend({
-        setUploader: function(obj, type) {
+        setUploader: function(obj, type, url) {
             if($(".modal").length == 0) {
                 $('body').append('<div class="fade modal" tabindex="-1" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button></div><div class="modal-body"></div></div></div></div>');
             }
-            $('.modal-content').load('/attachment/' + type, function(){
+            $('.modal-content').load(url, function(){
                 $('#fileupload').fileupload();
                 var selection = obj.cm.getSelection();
                 if (selection.length > 0) {

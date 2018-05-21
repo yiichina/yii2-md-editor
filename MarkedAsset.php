@@ -22,9 +22,4 @@ class MarkedAsset extends AssetBundle
     public $js = [
         'lib/marked.js',
     ];
-
-    public $depends = array(
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
-    );
 }

@@ -11,7 +11,4 @@ class LoadImageAsset extends AssetBundle
     public $js = [
         'load-image.all.min.js',
     ];
-    public $depends = [
-        'yii\web\JqueryAsset',
-    ];
 }

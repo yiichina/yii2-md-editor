@@ -36,9 +36,4 @@ class CodeMirrorAsset extends AssetBundle
         'addon/mode/overlay.js',
         'addon/edit/matchbrackets.js',
     ];
-
-    public $depends = array(
-        'yii\web\YiiAsset',
-        'yii\bootstrap\BootstrapAsset',
-    );
 }

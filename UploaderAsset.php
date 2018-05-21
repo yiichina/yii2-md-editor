@@ -14,8 +14,4 @@ class UploaderAsset extends AssetBundle
     public $js = [
     	'js/uploader.js',
     ];
-    public $depends = [
-        'yii\web\JqueryAsset',
-        'yii\bootstrap\BootstrapAsset',
-    ];
 }

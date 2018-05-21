@@ -11,8 +11,4 @@ class TmplAsset extends AssetBundle
     public $js = [
     	'js/tmpl.min.js',
     ];
-    public $depends = [
-        'yii\web\JqueryAsset',
-        'yii\bootstrap\BootstrapAsset',
-    ];
 }

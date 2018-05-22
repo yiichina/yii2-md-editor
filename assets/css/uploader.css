@@ -7,6 +7,7 @@
     max-height: 80px;
 }
 
-#uploader .nav > li > a {
-    padding: 8px 10px;
+#uploader .nav a {
+    font-size: .875rem;
+    padding: .5rem .75rem;
 }

@@ -4,18 +4,18 @@ use yii\helpers\Html;
 ?>
 
 <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
     <h4 class="modal-title">插入链接</h4>
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 </div>
 
 <div class="modal-body" id="uploader">
-    <ul class="nav nav-tabs">
-        <li class="active"><a href="#url" data-toggle="tab">链接地址</a></li>
-        <li><a href="#upload" data-toggle="tab">上传文件</a></li>
-        <li><a href="#history" data-toggle="tab">历史文件</a></li>
-    </ul>
+    <div class="nav nav-tabs">
+        <a href="#url" class="nav-item nav-link active" data-toggle="tab">链接地址</a>
+        <a href="#upload" class="nav-item nav-link" data-toggle="tab">上传文件</a>
+        <a href="#history" class="nav-item nav-link" data-toggle="tab">历史文件</a>
+    </div>
     <div class="tab-content">
-        <div class="tab-pane fade in active" id="url">
+        <div class="tab-pane fade show active" id="url">
             <div class="form-group">
                 <label for="attachment-url">链接URL</label>
                 <input type="text" class="form-control" id="attachment-url" placeholder="链接URL">
@@ -131,6 +131,6 @@ use yii\helpers\Html;
     </div>
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-    <button type="button" class="btn btn-success" data-dismiss="modal">插入</button>
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+    <button type="button" class="btn btn-primary" data-dismiss="modal">插入</button>
 </div>

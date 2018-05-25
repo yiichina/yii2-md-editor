@@ -28,6 +28,7 @@ class MdEditorAsset extends AssetBundle
     ];
 
     public $depends = array(
+        'yii\web\JqueryAsset',
         'yiichina\icons\IconAsset',
         'yiichina\mdeditor\CodeMirrorAsset',
         'yiichina\mdeditor\MarkedAsset',

@@ -1,5 +1,6 @@
 #uploader .tab-content {
     margin-top: 10px;
+    min-height: 160px;
 }
 
 #uploader .template-download .preview img {

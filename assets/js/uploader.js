@@ -11,7 +11,7 @@
                 if (selection.length > 0) {
                     $('#attachment-title').val(selection);
                 }
-                $('.modal-footer .btn-success').on('click', function () {
+                $('.modal-footer .btn-primary').on('click', function () {
                     if ($('#url').hasClass('active')) {
                         var title = $('#attachment-title').val(), url = $('#attachment-url').val();
                         if(type == 'image') {

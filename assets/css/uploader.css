@@ -12,3 +12,7 @@
     font-size: .875rem;
     padding: .5rem .75rem;
 }
+
+#uploader .fade.in {
+    opacity: 1
+}

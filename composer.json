@@ -17,7 +17,9 @@
         "bower-asset/codemirror": "*",
         "bower-asset/marked": "*",
         "bower-asset/blueimp-file-upload": "*",
-        "bower-asset/blueimp-gallery": "*"
+        "bower-asset/blueimp-gallery": "*",
+        "bower-asset/blueimp-tmpl": "*",
+        "bower-asset/blueimp-load-image": "*"
     },
     "autoload": {
         "psr-4": {

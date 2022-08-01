@@ -14,7 +14,7 @@
         "yiisoft/yii2-imagine": "*",
         "yiichina/yii2-icons": "*",
         "bower-asset/cmd-editor": "*",
-        "bower-asset/codemirror": "*",
+        "bower-asset/codemirror": "~5.65.6",
         "bower-asset/marked": "*",
         "bower-asset/blueimp-file-upload": "*",
         "bower-asset/blueimp-gallery": "*",

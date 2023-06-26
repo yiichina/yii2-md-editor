@@ -20,6 +20,6 @@ class MarkedAsset extends AssetBundle
     public $sourcePath = '@bower/marked';
 
     public $js = [
-        'lib/marked.js',
+        'marked.min.js',
     ];
 }
